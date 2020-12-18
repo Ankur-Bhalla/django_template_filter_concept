@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+{% load my_extras %}
+    {% block body_block%}
+        <h1>WELCOME TO INDEX</h1>
+
+        <!--built-in template filters-->
+        <h1>{{ text|upper }}</h1>
+        <h1>{{ number|add:'98' }}</h1>
+
+<!--    our own custom template filters in my_extras.py under templatetags folder under basic_app.-->
+<!--    Also add statement {% load my_extras %} above to use this custom template filter. -->
+<!--    Here replace "wor" with spaces from "hello world"-->
+        <h1>{{ text|cutout:'wor' }}</h1>
+
+    {% endblock %}
